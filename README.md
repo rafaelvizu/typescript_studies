@@ -19,6 +19,7 @@
 * **outDir:** pasta onde ficará a pasta de distribuição;
 
 * **sourceMap:** deixe como true, é importante para deputar;
+
 ## Configurando o sucrase
 
 No arquivo *package.json* de sua aplicação, no objeto script, adicione uma linha com:
@@ -47,3 +48,9 @@ No arquivo *package.json* de sua aplicação, no objeto script, adicione uma lin
                }
           ]
      }
+
+## Fontes
+
+* [typescriptlang](https://www.typescriptlang.org/docs/)
+* [3 maneiras de executar e debugar TypeScript com o VS Code
+](https://youtu.be/c2uGWy4Hn24)
