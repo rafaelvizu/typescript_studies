@@ -42,3 +42,35 @@ function exibirPonto(ponto: Ponto) {
 }
 
 exibirPonto({ x: 1, y: 2 });
+
+
+// any - ele desabilita o sistema de tipo do typescript
+
+// fazendo os códigos não darem erro ao serem transpilados
+let obj: any = { x: 0 };
+//obj.foo();
+//obj(); 
+obj = 'abc';
+
+// funções - propriedade opcional
+function printName(obj: {first: string, last?: string}) {
+  console.log(obj.first, obj.last ? obj.last : '');
+}
+
+printName({first: 'John'});
+printName({first: 'John', last: 'Doe'});
+
+
+// há tipos que não estão disponiveis no typescript
+// para isso usamos a asserção de tipo
+const data = <Date> new Date();
+console.log(data);
+
+
+// expressões de tipo de função
+// uma função com parametro que não tem retorno
+function greeter(fn: (a: string) => void) {
+  // ele vai chamar a função que foi passada como parametro
+}
+
+greeter((s) => console.log(s));
