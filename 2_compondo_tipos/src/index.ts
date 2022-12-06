@@ -71,6 +71,7 @@ console.log(data);
 // uma função com parametro que não tem retorno
 function greeter(fn: (a: string) => void) {
   // ele vai chamar a função que foi passada como parametro
+  fn("Hello, World");
 }
 
-greeter((s) => console.log(s));
+greeter((a:string) => console.log(a));

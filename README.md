@@ -111,6 +111,34 @@ Vamos usar a interface Usuario declarada no exemplo anterior:
      const user: Usuario = new UsuarioConta('Maria', 1);
      console.log(user);
 
+## Funções
+
+* Função que vai retornar um tipo de dados:
+
+          function setNome(nome: string): string {
+               return nome; // retorna um valor do tipo string
+          }
+
+* Função que pode retornar e receber como parametro uma união de tipos
+
+          function setNomes(nome: string | string[]) : string | string[] {
+               return nome;
+          }
+
+* Função com parametro opcional
+
+          function setPessoa(nome: string, idade?: number) {
+               console.log(nome, idade ? idade : '');
+          }
+
+* Função que vai receber outra função, no caso, a função que irá receber retorna void
+
+          function greeter(fn: (a:string) => void) {
+               fn('Hello');
+          }
+
+          greeter((a:string) => console.log(a));
+
 ## Fontes
 
 * [typescriptlang](https://www.typescriptlang.org/docs/)
